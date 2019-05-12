@@ -22,7 +22,7 @@ class Mediator(tk.Frame):
 
         self.update_img = tk.PhotoImage(file='images/edit.png').subsample(10)
         btn_edit_dialog = tk.Button(toolbar, text='Редактировать', bg='#DCDCDC', bd=0,
-                                    image=self.update_img, compound=tk.TOP, command=self.open__update_dialog)
+                                    image=self.update_img, compound=tk.TOP, command=self.open_update_dialog)
         btn_edit_dialog.pack(side=tk.LEFT)
 
         self.tree = ttk.Treeview(self, columns=('ID', 'description', 'costs', 'total'),
@@ -57,7 +57,7 @@ class Mediator(tk.Frame):
     def open_dialog(self):
         Insert()
 
-    def open__update_dialog(self):
+    def open_update_dialog(self):
         Update()
 
 
